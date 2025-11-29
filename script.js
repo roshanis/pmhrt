@@ -78,3 +78,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Download Discussion Guide
+document.addEventListener('DOMContentLoaded', function () {
+    const downloadButtons = document.querySelectorAll('.cta-button');
+    downloadButtons.forEach(button => {
+        if (button.textContent.includes('Download Discussion Guide')) {
+            button.addEventListener('click', function () {
+                window.open('discussion-guide.html', '_blank');
+            });
+        }
+    });
+});
